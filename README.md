@@ -1,8 +1,10 @@
-# C Makefile
+# C Makefile template
 
-A makefile template for C projects.
+A Makefile template for C projects.
 
-The `src/` directory is structured as follows:
+## Setup
+
+The `src/` directory is supposed to be structured as follows:
 
 ```
 src
@@ -19,6 +21,32 @@ And the Makefile will automatically detect the dependencies and compile everythi
 steps.
 
 All files in `src` in this repo are just dummy files to test whether the Makefile works.
+
+## Usage
+
+Compiling everything:
+
+```console
+% make
+```
+
+Compiling and running:
+
+```console
+% make run
+```
+
+Hot re-compile and run:
+
+```console
+% make watch
+```
+
+Cleanup:
+
+```console
+% make clean
+```
 
 ## Blog post
 

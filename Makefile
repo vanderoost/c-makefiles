@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Wextra -o3
+CFLAGS = -Wall -Wextra
 LDFLAGS =
 LDLIBS =
 
@@ -7,7 +7,7 @@ SRC = src
 OBJ = obj
 BIN = bin
 
-EXEC = $(BIN)/$(NAME)
+EXE = $(BIN)/$(NAME)
 
 BIN_SRCS = $(wildcard $(SRC)/*.c)
 LIB_SRCS = $(wildcard $(SRC)/*/*.c)
@@ -27,8 +27,8 @@ $(OBJ)/%.o: $(SRC)/%.c
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) $< -c -MMD -o $@
 
-run: $(EXEC)
-	@$(EXEC)
+run: $(EXE)
+	@$(EXE)
 
 watch:
 	@find $(SRC) -type f | entr -c make run
